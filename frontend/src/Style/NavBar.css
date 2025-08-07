@@ -1,0 +1,68 @@
+.MovieList{
+    position: relative; 
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.hide{
+    display: none;
+}
+
+.LOGO-cineprime {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.LOGO-cineprime img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.AddDiv{
+    position: absolute; /* Position it on top of the content */
+    width: 68%;
+    left: 21%;
+    background-color: white; /* Background color for visibility */
+    z-index: 10; /* Ensure it appears on top of other content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    max-height: 300px; /* Limit height */
+    overflow-y: auto; /* Add scroll if content overflows */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 5px; 
+    background-color: #646262;
+}
+
+.icon{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #423e3e;
+    width: 5vmin;
+    justify-content: center;
+}
+
+.search{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.SearchItem {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.SearchItem:hover {
+    background-color: #423e3e;
+}

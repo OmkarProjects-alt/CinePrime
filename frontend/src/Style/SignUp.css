@@ -1,0 +1,53 @@
+.auth-container {
+  height: 60vmin; 
+  width: 100vmin;
+  display: flex;
+  
+}
+
+p , label{
+    font-size: 90%;
+    font-weight: lighter;
+}
+
+.auth-card {
+  height: 90%; 
+  width: 60%; 
+  background: linear-gradient(to top left, rgb(54, 53, 53), rgba(42, 50, 38, 0.732), rgba(40, 71, 71, 0.781));
+  color: #151313;
+  padding: 2%; 
+  border-radius: 1vmin; 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input {
+  width: 90%; 
+  margin-bottom: 1rem;
+  font-size: 1.2vmin; 
+  padding: 0.8vmin; 
+}
+
+.auth-button {
+  background-color: #ffee00;
+  height: 15%; 
+  width: 12vmin;
+  border-radius: 1vmin;
+  border: none;
+  font-size: 1.5vmin; 
+}
+
+.auth-button:active {
+  transform: scale(0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.error-alert {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(177, 0, 0);
+  font-size: 1.5vmin; 
+}
+
+.auth-footer {
+  font-size: 100%; 
+  text-align: center;
+}

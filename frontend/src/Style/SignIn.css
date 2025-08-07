@@ -1,0 +1,69 @@
+body{
+    /* margin-top:8vmin; */
+    background-color: white;
+}
+
+.Sign {
+  height: 300%;
+  width: 300%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpaperaccess.com/full/4839516.jpg') 0 0  ;
+  background-size: 33.33% 33.33%;
+  animation: moveBackground 30s linear infinite;
+  z-index: -1;
+  position: fixed;
+  filter: blur(6px);
+}
+
+@keyframes moveBackground {
+   0% {
+         transform: translate(0 , 0);
+      }
+   100% {
+        transform: translate(-66.66% , -66.66%);
+      }
+}
+
+.Border{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:  #8e8787;
+    height: 76vmin;
+    width: 72vmin;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background : linear-gradient(to left bottom , rgb(51, 79, 69) ,rgba(71, 70, 70, 0.668), rgb(73, 45, 83));
+    z-index: 1;
+}
+
+.signin-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 15px;
+    background:linear-gradient(to top left , rgb(54, 53, 53) , rgba(42, 50, 38, 0.732) , rgba(40, 71, 71, 0.781));
+    color: #151313;
+    border: 1px solid #757575;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 60vmin;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+
+.LogIn{
+    background-image: url('../IMG/jason-rojas-MgXtsAtMNpc-unsplash.jpg');
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    height: 300%;
+    width: 300%;
+    z-index: -1;
+}

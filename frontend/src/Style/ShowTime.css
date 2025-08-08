@@ -1,5 +1,4 @@
 
-/* Base Styles */
 .showtime-page {
   margin-top: 80px;
   background-color: #f8f9fa;
@@ -13,7 +12,6 @@
   padding: 0 20px;
 }
 
-/* Movie Header */
 .movie-header-container {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: white;
@@ -55,7 +53,6 @@
   transform: translateY(-2px);
 }
 
-/* Date Selector */
 .date-selector-container {
   padding: 30px 0;
   background-color: white;
@@ -174,13 +171,11 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Showtimes Container */
 .showtimes-container {
   padding: 40px 0;
   background-color: #f8f9fa;
 }
 
-/* Theater Cards */
 .theater-list {
   display: flex;
   flex-direction: column;
@@ -280,7 +275,6 @@
   align-items: center;
 }
 
-/* Empty States */
 .select-date-prompt,
 .no-showtimes {
   text-align: center;
@@ -317,7 +311,6 @@
   font-size: 1.1rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .movie-title {
     font-size: 2rem;
@@ -363,7 +356,6 @@
 
 
 
-/* Dark Theme Styles */
 .dark-theme .showtime-page {
   background-color: #121212;
   color: #ffffff;

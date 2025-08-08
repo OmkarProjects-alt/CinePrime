@@ -1,6 +1,6 @@
 const API_URL = process.env.REACT_APP_API_URL;
 const MainAPI = "https://api.themoviedb.org/3/movie"
-const Key = "73fecc316bbe6532810303da979c7447"
+const Key = process.env.REACT_APP_TMDB_KEY
 
 export async function fetchMovie() {
     const res = await fetch(`${API_URL}/movies`)

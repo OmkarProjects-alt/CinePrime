@@ -19,7 +19,6 @@ export default function NavBar(props) {
   const { logout } = useAuth()
 
   const user = auth.currentUser; 
-  // console.log(user.email)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -46,7 +45,6 @@ export default function NavBar(props) {
         // Navigate to the first movie's page
         navigate(`/movies/${getSearchMovie[0].id}`);
       } else {
-        // Optional: Show a message or handle no results
         console.log("No movies found");
       }
     }
@@ -61,26 +59,22 @@ export default function NavBar(props) {
       if (res.ok) {
         const data = await res.json();
         
-        // First try exact match (case-insensitive)
         const exactMatch = data.results.filter(movie => 
           movie.title.toLowerCase() === search.toLowerCase()
         );
   
-        // If no exact matches, try "starts with" matches
         const startsWithMatches = exactMatch.length === 0 
           ? data.results.filter(movie => 
               movie.title.toLowerCase().startsWith(search.toLowerCase())
             )
           : [];
   
-        // If still no matches, try "includes" matches (optional)
         const includesMatches = exactMatch.length === 0 && startsWithMatches.length === 0
           ? data.results.filter(movie => 
               movie.title.toLowerCase().includes(search.toLowerCase())
             )
           : [];
   
-        // Combine results with priority: exact > startsWith > includes
         setSearchMovie([...exactMatch, ...startsWithMatches, ...includesMatches]);
         
       } else {
@@ -133,23 +127,6 @@ export default function NavBar(props) {
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
-                {/* <li className="nav-item dropdown">
-                  <a 
-                    className="nav-link dropdown-toggle" 
-                    href="#" 
-                    id="navbarDropdown" 
-                    role="button" 
-                    data-bs-toggle="dropdown" 
-                    aria-expanded="false"
-                  >
-                    Categories
-                  </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{zIndex:'9000'}}>
-                    <li><Link className="dropdown-item" to="/movies/popular">Popular</Link></li>
-                    <li><Link className="dropdown-item" to="/movies/now-playing">Now Playing</Link></li>
-                    <li><Link className="dropdown-item" to="/movies/upcoming">Upcoming</Link></li>
-                  </ul>
-                </li> */}
               </ul>
               <form className="d-flex w-75" onSubmit={LoadMovie}>
                 <div className='border border-1 d-flex align-items-center p-2 icon' >
@@ -208,10 +185,7 @@ export default function NavBar(props) {
                   )
                   : <Link to='/SignIn' className="btn btn-outline-danger" type="submit">Sign In</Link>
                }
-              {/* <div className={`form-check form-switch text-${props.darkMode === 'light' ? 'grey' : 'light'}`}>
-                <input className="form-check-input" type="checkbox" onClick={props.EnableDark} role="switch" id="flexSwitchCheckDefault" style={{ backgroundImage: props.darkMode === 'light' ? "url('https://th.bing.com/th/id/OIP.GNFKwhJlvTX6cWh7-WxmowHaEK?pid=ImgDet&w=474&h=266&rs=1')" : "url('https://th.bing.com/th/id/OIP.mb3TcglTGiYdbxX8u2cq1gHaEp?pid=ImgDet&w=474&h=297&rs=1')", width: '10vmin', height: '5vmin' }} />
-                <label className="form-check-label" htmlFor="flexSwitchCheckDefault"></label>
-              </div> */}
+
               <div>
                  <button className={`btn btn-outline-${props.darkMode==='light' ? 'light' : 'dark'}`} onClick={props.EnableDark}>
                    {props.darkMode === 'light' 

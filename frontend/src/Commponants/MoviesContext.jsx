@@ -1,4 +1,3 @@
-// src/context/MoviesContext.js
 import { createContext, useState } from 'react';
 
 export const MoviesContext = createContext();

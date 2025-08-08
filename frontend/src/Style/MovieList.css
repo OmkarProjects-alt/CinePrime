@@ -108,14 +108,6 @@
     margin-top: 10px;
 }
 
-/* .movie-dashboard.fade {
-    animation: fadeSlide 0.5s ease-in-out;
-  } */
-  
-  /* .movie-dashboard.fade {
-    animation: fadeSlide 0.5s ease-in-out;
-  }
-   */
   @keyframes fadeSlide {
     0% {
       opacity: 0;
@@ -127,15 +119,6 @@
     }
   }
   
-  
-
-
-
-
-
-
-
-  /* Movie Details Overlay */
 .movie-details-overlay {
     position: fixed;
     top: 0;
@@ -215,8 +198,7 @@
 
 
 .transition-box {
-    /* GSAP will handle the positioning */
-    will-change: transform, opacity; /* Optimizes animations */
+    will-change: transform, opacity; 
 }
 
 /* Optional backdrop */
@@ -245,13 +227,6 @@
   overflow-x: auto;
   margin: 30px 0;
 }
-
-
-/* .leatest-Trailer .containe {
-  display: flex;
-  flex-direction: column;     
-  gap: 10px;                
-} */
 
 .leatest-Trailer::-webkit-scrollbar {
   width: 8px;
@@ -293,7 +268,6 @@
   background-attachment: fixed;
 }
 
-/* Enhanced card styling */
 .card-container .card {
   transition: all 0.3s ease;
   border: none;
@@ -351,7 +325,6 @@
   opacity: 0.8;
   transition: all 0.3s ease;
   
-  /* Optional circle background */
   background: rgba(0,0,0,0.5);
   border-radius: 50%;
   width: 10vmin;
@@ -399,14 +372,6 @@
     background-color: #000;
 }
 
-
-
-
-
-
-
-
-/* Updated Movie Dashboard Styles */
 .movie-dashboard {
     height: 350px;
     margin-bottom: 40px;
@@ -480,7 +445,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, transparent 100%); */
     z-index: -1;
 }
 

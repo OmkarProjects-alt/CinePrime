@@ -148,7 +148,7 @@ export default function ShowMovieDetails(props) {
 
 
   useEffect(() => {
-    setLoading(true); // Set loading to true when starting new fetch
+    setLoading(true);
     Promise.all([
       fetchMovieDetail(id),
       FetchDB(id)
@@ -156,11 +156,11 @@ export default function ShowMovieDetails(props) {
     .then(([movieShowData, movieDetailData]) => {
       setMovieShow(movieShowData);
       setMovieDetail(movieDetailData);
-      setLoading(false); // Set loading to false when data is ready
+      setLoading(false);
     })
     .catch(error => {
       console.error(error);
-      setLoading(false); // Ensure loading is false even if there's an error
+      setLoading(false);
     });
   },[id]);
 
@@ -262,8 +262,8 @@ export default function ShowMovieDetails(props) {
 
   useEffect(() => {
     if (castSliderRef.current) {
-      const slideWidth = 15; // vmin width of each cast member
-      const gap = 5; // vmin gap between items
+      const slideWidth = 15;
+      const gap = 5; 
       const translateX = -currentSlideCast * (slideWidth + gap);
       castSliderRef.current.style.transform = `translateX(${translateX}vmin)`;
     }
@@ -271,8 +271,8 @@ export default function ShowMovieDetails(props) {
 
   useEffect(() => {
     if (crewSliderRef.current) {
-      const slideWidth = 15; // vmin width of each crew member
-      const gap = 5; // vmin gap between items
+      const slideWidth = 15;
+      const gap = 5;
       const translateX = -currentSlideCrew * (slideWidth + gap);
       crewSliderRef.current.style.transform = `translateX(${translateX}vmin)`;
     }
@@ -288,8 +288,6 @@ export default function ShowMovieDetails(props) {
       return <Loading />;
   }
 
-  // console.log(related)
-
   const randomVotes = Math.floor(Math.random() * 50 + 1);
   console.log(movies , "my movies")
 
@@ -298,7 +296,6 @@ export default function ShowMovieDetails(props) {
       <div className='dashboard'>
       {movieDetail && (
         <>
-         {/* <img src={`https://image.tmdb.org/t/p/original${movieShow.backdrop_path}`} className='backImg h-75 w-50 position-absolute top-0 end-0'  alt="" /> */}
           <div className='backImg position-absolute top-0 end-0 ' style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${movieShow.backdrop_path})`  , minHeight:'0vh' }}></div>
             <div className='card-movie' ref={SlideRef}>
               <div className='poster'>
@@ -354,7 +351,6 @@ export default function ShowMovieDetails(props) {
                   <button onClick={()=>showTrailer( movieShow.id ||movieDetail.movies_id)} style={{height:'6vmin' , width:'25vmin'}} className='btn btn-light btn-transform text-center fs-5'><i className="bi bi-play-fill "></i>Play Trailer</button>
                 </div>
               </div>
-              {/* <img src={`https://image.tmdb.org/t/p/w200${movieShow.backdrop_path}`} className='my-5 mb-5' style={{height:'50vmin' , width:'60vmin', backgroundImage:``}} alt="IMG" /> */}
             </div>
         </>
       )}
@@ -508,7 +504,6 @@ export default function ShowMovieDetails(props) {
                             {placeholderArray.map((_,index)=>(
                                 <div key={index} className=''>
                                     <div className="card p-3 bg-dark" aria-hidden="true">
-                                        {/* <img src="..." className="card-img-top" alt="..."/> */}
                                         <div className='' style={{backgroundColor:'#6c757d' , height: '40vmin', width: '35vmin'}}></div>
                                         <div className="card-body w-50">
                                             <h5 className="card-title text-light placeholder-glow">

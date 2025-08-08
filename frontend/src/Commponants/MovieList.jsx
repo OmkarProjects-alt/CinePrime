@@ -7,12 +7,10 @@ import { useContext } from 'react';
 import { MoviesContext } from './MoviesContext';
 
 export default function MovieList() {
-    // const [movies, setMovies] = useState([]);
     const { movies, setMovies } = useContext(MoviesContext);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [upComing , setUpComing ] = useState([]);
-    // const cardRefs = useRef([])
     const [trailerURL , setTrailerURL] = useState('')
     const [showMovieTrailer , setShowMovieTrailer] = useState(false)
     const [displayUpcoming , setDisplayedUpComing] = useState(5) 
@@ -72,34 +70,6 @@ export default function MovieList() {
     } , [displayUpcoming ])
 
 
-    // const handleTransition = contextSafe((index) => {
-    //     const card = ContainerRef.current[index]; 
-    //     if (card) {
-
-    //         const rect = card.getBoundingClientRect();
-
-    //         if (!originalPositions.current[index]) {
-    //             originalPositions.current[index] = { x: 0, y: 0 };
-    //           }
-
-    //         const centerX = window.innerWidth / 2; 
-    //         const centerY = window.innerHeight / 2; 
-        
-    //         const offsetX = centerX - (rect.left + rect.width / 2);
-    //         const offsetY = centerY - (rect.top + rect.height / 2); 
-
-    //       gsap.to(card, {
-    //         x: offsetX, 
-    //         y: offsetY,
-    //         opacity: 1,
-    //         ease:'power3.out',
-    //         duration: 1,
-    //         zIndex:10,
-    //       });
-    //       setActiveCardIndex(index)
-    //     }
-    //   })
-
   const topPicks = movies.slice(0, 5);
     const currentMovie = topPicks[currentIndex];
 
@@ -138,56 +108,6 @@ export default function MovieList() {
         }
     }, [movies, rating]);
 
-// useEffect(() => {
-//   console.log('Updated highRated:', highRated);
-// }, [highRated]);
-    // useGSAP(()=>{
-        
-    //     const content = gsap.utils.toArray(topPicks)
-        
-    //     const Interval = setInterval(()=>{
-    //         const currentCard = cardRefs.current[currentIndex]
-    //         const nextIndex = (currentIndex + 1) % topPicks.length;
-
-    //         gsap.set(currentIndex , {
-    //             x:0,
-    //             opacity:1,
-                
-    //         })
-
-    //         const nextCard = cardRefs.current[nextIndex];
-    //         setCurrentIndex(nextIndex)
-
-    //         gsap.set(nextCard , {
-    //             x:1000,
-    //         })
-
-    //         gsap.to(currentCard , {
-    //             x: -700,
-    //             opacity: 0,
-    //             duration: 1,
-
-    //             // onComplete: () => {
-    //             //     gsap.set(currentCard , {x:-700 , opacity:0})
-
-    //             //     setCurrentIndex(nextIndex)
-
-    //             //     const nextCard = cardRefs.current[nextIndex];
-
-    //             //     gsap.to(nextCard , {
-    //             //         x: 1200,
-    //             //         opacity: 1,
-    //             //         duration: 1,
-    //             //         ease: 'power3.out',
-    //             //     })
-    //             // }
-    //         })
-    //     } , 3000)
-
-    //         return () => clearInterval(Interval); // Cleanup interval on unmount
-
-    // } , [ currentIndex , topPicks])
-
 
     const showTrailer = async(id) =>{
         console.log(id)
@@ -207,8 +127,6 @@ export default function MovieList() {
         console.log(err.message)
     }
 }
-
-// console.log(trailerURL)
 
   const StateChange = () => {
     setTrailerURL('')
@@ -363,9 +281,7 @@ return (
                                 </div>
                             </div>
                         ))) : (
-                            // <div className='position- end-50 mb-5'>
-                            //     <Loading />
-                            // </div>
+
                         <div className=' d-flex gap-2'>
                             {placeholderArray.map((_,index)=>(
                                 <div key={index} className=''>

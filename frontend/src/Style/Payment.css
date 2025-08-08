@@ -1,6 +1,4 @@
-/* Payment.css */
 
-/* Base Styles */
 .payment-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -37,8 +35,7 @@
   min-width: 300px;
 }
 
-/* Payment Card Styles */
-.payment-card, 
+ .payment-card, 
 .order-summary-card {
   background: white;
   border-radius: 10px;
@@ -57,8 +54,7 @@
   gap: 0.5rem;
 }
 
-/* Form Styles */
-.form-group {
+ .form-group {
   margin-bottom: 1.5rem;
 }
 
@@ -96,8 +92,7 @@
   flex: 1;
 }
 
-/* Button Styles */
-.submit-btn {
+ .submit-btn {
   width: 100%;
   padding: 1rem;
   background-color: #3498db;
@@ -124,8 +119,7 @@
   cursor: not-allowed;
 }
 
-/* Security Info */
-.security-info {
+ .security-info {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #7f8c8d;
@@ -135,8 +129,7 @@
   gap: 0.5rem;
 }
 
-/* Order Summary Styles */
-.movie-info {
+ .movie-info {
   margin-bottom: 2rem;
 }
 
@@ -179,8 +172,7 @@
   border-top: 1px solid #eee;
 }
 
-/* Success Animation */
-.payment-success-container {
+ .payment-success-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,8 +245,7 @@
   }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .payment-content {
     flex-direction: column;
   }
